@@ -24,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B879FC152A194CA200F7ADA3 /* screen.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = screen.mp4; sourceTree = "<group>"; };
 		B8B631402A14F8E2009ABCA9 /* TradingViewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TradingViewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8B631432A14F8E2009ABCA9 /* TradingViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradingViewApp.swift; sourceTree = "<group>"; };
 		B8B631452A14F8E2009ABCA9 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
@@ -52,6 +53,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B879FC142A194C8A00F7ADA3 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				B879FC152A194CA200F7ADA3 /* screen.mp4 */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
 		B8B631372A14F8E2009ABCA9 = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +80,7 @@
 		B8B631422A14F8E2009ABCA9 /* TradingViewApp */ = {
 			isa = PBXGroup;
 			children = (
+				B879FC142A194C8A00F7ADA3 /* Screen */,
 				B8B631492A14F8E3009ABCA9 /* Preview Content */,
 				B8B631472A14F8E3009ABCA9 /* Assets.xcassets */,
 				B8B6316B2A1576A9009ABCA9 /* Helper */,
