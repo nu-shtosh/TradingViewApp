@@ -7,18 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B8B631442A14F8E2009ABCA9 /* TradingViewAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B631432A14F8E2009ABCA9 /* TradingViewAppApp.swift */; };
-		B8B631462A14F8E2009ABCA9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B631452A14F8E2009ABCA9 /* ContentView.swift */; };
+		B8B631442A14F8E2009ABCA9 /* TradingViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B631432A14F8E2009ABCA9 /* TradingViewApp.swift */; };
+		B8B631462A14F8E2009ABCA9 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B631452A14F8E2009ABCA9 /* MainTabView.swift */; };
 		B8B631482A14F8E3009ABCA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8B631472A14F8E3009ABCA9 /* Assets.xcassets */; };
 		B8B6314B2A14F8E3009ABCA9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8B6314A2A14F8E3009ABCA9 /* Preview Assets.xcassets */; };
+		B8B631522A14FC9D009ABCA9 /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B631512A14FC9D009ABCA9 /* TopView.swift */; };
+		B8B631542A14FCD4009ABCA9 /* TradeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B631532A14FCD4009ABCA9 /* TradeView.swift */; };
+		B8B631622A150126009ABCA9 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B631612A150126009ABCA9 /* BackgroundView.swift */; };
+		B8B631652A1503CC009ABCA9 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B631642A1503CC009ABCA9 /* LoadingView.swift */; };
+		B8B6316A2A157424009ABCA9 /* Trader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B631692A157424009ABCA9 /* Trader.swift */; };
+		B8B6316D2A1576BD009ABCA9 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B6316C2A1576BD009ABCA9 /* DataManager.swift */; };
+		B8B6316F2A164D34009ABCA9 /* CurrencyPairView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B6316E2A164D34009ABCA9 /* CurrencyPairView.swift */; };
+		B8B631732A18E956009ABCA9 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B631722A18E956009ABCA9 /* TimerView.swift */; };
+		B8B631752A18E9C6009ABCA9 /* TradingViewWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B631742A18E9C6009ABCA9 /* TradingViewWidgetView.swift */; };
+		B8B631772A18EAE7009ABCA9 /* InvestmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B631762A18EAE7009ABCA9 /* InvestmentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B8B631402A14F8E2009ABCA9 /* TradingViewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TradingViewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B8B631432A14F8E2009ABCA9 /* TradingViewAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradingViewAppApp.swift; sourceTree = "<group>"; };
-		B8B631452A14F8E2009ABCA9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B8B631432A14F8E2009ABCA9 /* TradingViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradingViewApp.swift; sourceTree = "<group>"; };
+		B8B631452A14F8E2009ABCA9 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		B8B631472A14F8E3009ABCA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B8B6314A2A14F8E3009ABCA9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B8B631512A14FC9D009ABCA9 /* TopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
+		B8B631532A14FCD4009ABCA9 /* TradeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeView.swift; sourceTree = "<group>"; };
+		B8B631612A150126009ABCA9 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		B8B631642A1503CC009ABCA9 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		B8B631692A157424009ABCA9 /* Trader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trader.swift; sourceTree = "<group>"; };
+		B8B6316C2A1576BD009ABCA9 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		B8B6316E2A164D34009ABCA9 /* CurrencyPairView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyPairView.swift; sourceTree = "<group>"; };
+		B8B631722A18E956009ABCA9 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		B8B631742A18E9C6009ABCA9 /* TradingViewWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradingViewWidgetView.swift; sourceTree = "<group>"; };
+		B8B631762A18EAE7009ABCA9 /* InvestmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +71,12 @@
 		B8B631422A14F8E2009ABCA9 /* TradingViewApp */ = {
 			isa = PBXGroup;
 			children = (
-				B8B631432A14F8E2009ABCA9 /* TradingViewAppApp.swift */,
-				B8B631452A14F8E2009ABCA9 /* ContentView.swift */,
-				B8B631472A14F8E3009ABCA9 /* Assets.xcassets */,
 				B8B631492A14F8E3009ABCA9 /* Preview Content */,
+				B8B631472A14F8E3009ABCA9 /* Assets.xcassets */,
+				B8B6316B2A1576A9009ABCA9 /* Helper */,
+				B8B631582A14FD3B009ABCA9 /* App */,
+				B8B631682A1573FB009ABCA9 /* Models */,
+				B8B631572A14FD34009ABCA9 /* Views */,
 			);
 			path = TradingViewApp;
 			sourceTree = "<group>";
@@ -65,6 +87,78 @@
 				B8B6314A2A14F8E3009ABCA9 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B8B631552A14FCF5009ABCA9 /* Top */ = {
+			isa = PBXGroup;
+			children = (
+				B8B631512A14FC9D009ABCA9 /* TopView.swift */,
+			);
+			path = Top;
+			sourceTree = "<group>";
+		};
+		B8B631562A14FD06009ABCA9 /* Trade */ = {
+			isa = PBXGroup;
+			children = (
+				B8B631712A18E93F009ABCA9 /* Components */,
+				B8B631532A14FCD4009ABCA9 /* TradeView.swift */,
+			);
+			path = Trade;
+			sourceTree = "<group>";
+		};
+		B8B631572A14FD34009ABCA9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B8B631632A15012C009ABCA9 /* Components */,
+				B8B631552A14FCF5009ABCA9 /* Top */,
+				B8B631562A14FD06009ABCA9 /* Trade */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B8B631582A14FD3B009ABCA9 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B8B631432A14F8E2009ABCA9 /* TradingViewApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B8B631632A15012C009ABCA9 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B8B631612A150126009ABCA9 /* BackgroundView.swift */,
+				B8B631642A1503CC009ABCA9 /* LoadingView.swift */,
+				B8B631452A14F8E2009ABCA9 /* MainTabView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		B8B631682A1573FB009ABCA9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B8B631692A157424009ABCA9 /* Trader.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B8B6316B2A1576A9009ABCA9 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				B8B6316C2A1576BD009ABCA9 /* DataManager.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		B8B631712A18E93F009ABCA9 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B8B631742A18E9C6009ABCA9 /* TradingViewWidgetView.swift */,
+				B8B6316E2A164D34009ABCA9 /* CurrencyPairView.swift */,
+				B8B631722A18E956009ABCA9 /* TimerView.swift */,
+				B8B631762A18EAE7009ABCA9 /* InvestmentView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +231,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8B631462A14F8E2009ABCA9 /* ContentView.swift in Sources */,
-				B8B631442A14F8E2009ABCA9 /* TradingViewAppApp.swift in Sources */,
+				B8B631732A18E956009ABCA9 /* TimerView.swift in Sources */,
+				B8B631622A150126009ABCA9 /* BackgroundView.swift in Sources */,
+				B8B6316D2A1576BD009ABCA9 /* DataManager.swift in Sources */,
+				B8B6316A2A157424009ABCA9 /* Trader.swift in Sources */,
+				B8B631462A14F8E2009ABCA9 /* MainTabView.swift in Sources */,
+				B8B631542A14FCD4009ABCA9 /* TradeView.swift in Sources */,
+				B8B631522A14FC9D009ABCA9 /* TopView.swift in Sources */,
+				B8B631772A18EAE7009ABCA9 /* InvestmentView.swift in Sources */,
+				B8B6316F2A164D34009ABCA9 /* CurrencyPairView.swift in Sources */,
+				B8B631442A14F8E2009ABCA9 /* TradingViewApp.swift in Sources */,
+				B8B631752A18E9C6009ABCA9 /* TradingViewWidgetView.swift in Sources */,
+				B8B631652A1503CC009ABCA9 /* LoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
