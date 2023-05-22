@@ -181,6 +181,8 @@ struct TradeView: View {
             resultAlertMessage = "You lost the investment amount."
         }
         switch balance {
+        case 0:
+            investment = 0
         case (1...1_000):
             investment = 100
         case (1_000...10_000):
