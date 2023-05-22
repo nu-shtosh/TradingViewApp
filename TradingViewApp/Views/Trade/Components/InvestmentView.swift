@@ -9,6 +9,7 @@ import SwiftUI
 
 struct InvestmentView: View {
     @Binding var investment: Int
+    let balance: Int
 
     var body: some View {
         VStack {
@@ -20,12 +21,22 @@ struct InvestmentView: View {
                     Image(systemName: "minus.circle")
                 }
 
-                TextField("Amount", value: $investment, formatter: NumberFormatter())
-                    .padding(.horizontal)
-                    .keyboardType(.numberPad)
-                    .submitLabel(.done)
-                    .bold()
-                
+                TextField("Amount", text: Binding<String>(
+                    get: { String(investment) },
+                    set: {
+                        if let value = Int($0) {
+                            if value <= balance {
+                                investment = value
+                            } else {
+                                investment = balance
+                            }
+                        }
+                    }
+                ))
+                .padding(.horizontal)
+                .keyboardType(.numberPad)
+                .submitLabel(.done)
+                .bold()
 
                 Button(action: {
                     increaseAmount()
@@ -39,19 +50,23 @@ struct InvestmentView: View {
     }
     
     private func decreaseAmount() {
-        if investment > 0 {
+        if investment > 100 {
             investment -= 100
         }
     }
 
     private func increaseAmount() {
-        investment += 100
+        if balance > investment {
+            investment += 100
+        } else {
+            investment = balance
+        }
     }
 }
 
 
 struct InvestmentView_Previews: PreviewProvider {
     static var previews: some View {
-        InvestmentView(investment: .constant(1000))
+        InvestmentView(investment: .constant(1000), balance: 0)
     }
 }

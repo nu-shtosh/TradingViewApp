@@ -83,7 +83,7 @@ struct TopView: View {
                         updateTraders()
                     }
                 }
-                .frame(width: screen.width * 0.9)
+                .frame(width: Constants.shared.screen.width * 0.9)
                 .cornerRadius(16)
             }
             .navigationTitle("Top 10 Traders")

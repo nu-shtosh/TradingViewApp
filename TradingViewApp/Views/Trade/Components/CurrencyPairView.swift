@@ -26,7 +26,8 @@ struct CurrencyPairView: View {
                     }) {
                         Text(allPairs[key]!.0)
                             .padding()
-                            .frame(width: screen.width * 0.4, height: screen.height * 0.07)
+                            .frame(width: Constants.shared.screen.width * 0.4,
+                                   height: Constants.shared.screen.height * 0.07)
                             .background(Color.gray.opacity(0.3))
                             .foregroundColor(.white)
                             .cornerRadius(12)

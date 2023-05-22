@@ -11,6 +11,8 @@ struct MainTabView: View {
     @State private var selectedTab = 0
 
     init() {
+
+        requestNotificationPermission()
         UITabBar.appearance().backgroundColor = UIColor(Color("darkBlue"))
         UITabBar.appearance().unselectedItemTintColor = UIColor.gray
     }
@@ -40,6 +42,18 @@ struct MainTabView: View {
         .tint(Color("darkGreen"))
         .toolbarBackground(.visible, for: .tabBar)
         .toolbarColorScheme(.dark, for: .tabBar)
+    }
+
+    private func requestNotificationPermission() {
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { granted, error in
+            if let error = error {
+                print("Ошибка при запросе разрешения уведомлений: \(error.localizedDescription)")
+            } else if granted {
+                print("Разрешение на уведомления получено")
+            } else {
+                print("Разрешение на уведомления не получено")
+            }
+        }
     }
 }
 

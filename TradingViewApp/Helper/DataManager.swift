@@ -7,9 +7,10 @@
 
 import Foundation
 
-class DataManager {
+final class DataManager {
     static let shared: DataManager = .init()
 
+    /// Список трейдеров
     let traders = [Trader(deposit: 999, name: "Oliver", country: "🇦🇹", profit: 124244),
                    Trader(deposit: 777, name: "Jack", country: "🇧🇬", profit: 1243412),
                    Trader(deposit: 330, name: "Harry", country: "🇧🇯", profit: 324211),
@@ -21,10 +22,13 @@ class DataManager {
                    Trader(deposit: 1230, name: "James", country: "🇬🇳", profit: 4000_50),
                    Trader(deposit: 3000, name: "William", country: "🏴‍☠️", profit: 20000_00)]
 
+    /// Баланс
     let yourBalance = 10000
 
+    /// Инвестиции
     let investmentAmount = 1000
 
+    /// Пары
     let pairs = ["EURUSD": ("EUR / USD", "FX:EURUSD"),
                  "GBPUSD": ("GPB / USD", "FX:GBPUSD"),
                  "USDJPY": ("USD / JPY", "FX:USDJPY"),

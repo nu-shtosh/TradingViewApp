@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B879FC172A1B561600F7ADA3 /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B879FC162A1B561600F7ADA3 /* Contants.swift */; };
+		B879FC192A1B57AA00F7ADA3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B879FC182A1B57AA00F7ADA3 /* Extensions.swift */; };
 		B8B631442A14F8E2009ABCA9 /* TradingViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B631432A14F8E2009ABCA9 /* TradingViewApp.swift */; };
 		B8B631462A14F8E2009ABCA9 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B631452A14F8E2009ABCA9 /* MainTabView.swift */; };
 		B8B631482A14F8E3009ABCA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8B631472A14F8E3009ABCA9 /* Assets.xcassets */; };
@@ -24,7 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B879FC152A194CA200F7ADA3 /* screen.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = screen.mp4; sourceTree = "<group>"; };
+		B879FC162A1B561600F7ADA3 /* Contants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contants.swift; sourceTree = "<group>"; };
+		B879FC182A1B57AA00F7ADA3 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B8B631402A14F8E2009ABCA9 /* TradingViewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TradingViewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8B631432A14F8E2009ABCA9 /* TradingViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradingViewApp.swift; sourceTree = "<group>"; };
 		B8B631452A14F8E2009ABCA9 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
@@ -53,14 +56,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B879FC142A194C8A00F7ADA3 /* Screen */ = {
-			isa = PBXGroup;
-			children = (
-				B879FC152A194CA200F7ADA3 /* screen.mp4 */,
-			);
-			path = Screen;
-			sourceTree = "<group>";
-		};
 		B8B631372A14F8E2009ABCA9 = {
 			isa = PBXGroup;
 			children = (
@@ -80,7 +75,6 @@
 		B8B631422A14F8E2009ABCA9 /* TradingViewApp */ = {
 			isa = PBXGroup;
 			children = (
-				B879FC142A194C8A00F7ADA3 /* Screen */,
 				B8B631492A14F8E3009ABCA9 /* Preview Content */,
 				B8B631472A14F8E3009ABCA9 /* Assets.xcassets */,
 				B8B6316B2A1576A9009ABCA9 /* Helper */,
@@ -156,6 +150,8 @@
 			isa = PBXGroup;
 			children = (
 				B8B6316C2A1576BD009ABCA9 /* DataManager.swift */,
+				B879FC162A1B561600F7ADA3 /* Contants.swift */,
+				B879FC182A1B57AA00F7ADA3 /* Extensions.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -247,7 +243,9 @@
 				B8B6316A2A157424009ABCA9 /* Trader.swift in Sources */,
 				B8B631462A14F8E2009ABCA9 /* MainTabView.swift in Sources */,
 				B8B631542A14FCD4009ABCA9 /* TradeView.swift in Sources */,
+				B879FC192A1B57AA00F7ADA3 /* Extensions.swift in Sources */,
 				B8B631522A14FC9D009ABCA9 /* TopView.swift in Sources */,
+				B879FC172A1B561600F7ADA3 /* Contants.swift in Sources */,
 				B8B631772A18EAE7009ABCA9 /* InvestmentView.swift in Sources */,
 				B8B6316F2A164D34009ABCA9 /* CurrencyPairView.swift in Sources */,
 				B8B631442A14F8E2009ABCA9 /* TradingViewApp.swift in Sources */,

@@ -30,7 +30,7 @@ struct TradeView: View {
                             .font(.system(size: 24, weight: .bold))
                     }
                     .padding()
-                    .frame(width: screen.width * 0.93, height: screen.height * 0.08)
+                    .frame(width: Constants.shared.screen.width * 0.93, height: Constants.shared.screen.height * 0.08)
                     .background(Color.gray.opacity(0.3))
                     .foregroundColor(.white)
                     .cornerRadius(12)
@@ -40,15 +40,15 @@ struct TradeView: View {
                     ZStack {
                         if isLoading {
                             ProgressView()
-                                .background(Color("darkBlue"))
+                                .background(Color.clear)
                                 .cornerRadius(12)
-                                .frame(height: screen.height * 0.35)
+                                .frame(height: Constants.shared.screen.height * 0.35)
                                 .padding(.horizontal)
                         } else {
                             TradingViewWidgetView(selectedCurrency: $currentPair)
                                 .background(Color("darkBlue"))
                                 .cornerRadius(12)
-                                .frame(height: screen.height * 0.35)
+                                .frame(height: Constants.shared.screen.height * 0.35)
                                 .padding(.horizontal)
                         }
                     }
@@ -69,7 +69,7 @@ struct TradeView: View {
                         .font(.headline)
                         .foregroundColor(.white)
                         .padding()
-                        .frame(height: screen.height * 0.08)
+                        .frame(height: Constants.shared.screen.height * 0.08)
                         .background(Color.gray.opacity(0.3))
                         .cornerRadius(12)
                     }
@@ -79,15 +79,15 @@ struct TradeView: View {
                     HStack(spacing: 10) {
                         TimerView(remainingSeconds: $remainingSeconds)
                             .padding()
-                            .frame(width: 192, height: screen.height * 0.1)
+                            .frame(width: 192, height: Constants.shared.screen.height * 0.1)
                             .background(Color.gray.opacity(0.3))
                             .cornerRadius(12)
-                        InvestmentView(investment: $investment)
+                        InvestmentView(investment: $investment, balance: balance)
                             .padding()
-                            .frame(width: 192, height: screen.height * 0.1)
+                            .frame(width: 192, height: Constants.shared.screen.height * 0.1)
                             .background(Color.gray.opacity(0.3))
                             .cornerRadius(12)
-                            .frame(height: screen.height * 0.1)
+                            .frame(height: Constants.shared.screen.height * 0.1)
                     }
                     .padding(.horizontal)
                     .font(.headline)
@@ -106,9 +106,10 @@ struct TradeView: View {
                                 }
                                 Spacer()
                             }
-                            .background(.red)
+                            .background(balance > 0 ? .red : .gray)
                             .cornerRadius(12)
                         }
+                        .disabled(balance < 1)
 
                         Button(action: sellInvestment) {
                             HStack {
@@ -121,11 +122,13 @@ struct TradeView: View {
                                 }
                                 Spacer()
                             }
-                            .background(Color("darkGreen"))
+                            .background(balance > 0 ? Color("darkGreen") : .gray)
                             .cornerRadius(12)
                         }
+                        .disabled(balance < 1)
+
                     }
-                    .frame(height: screen.height * 0.1)
+                    .frame(height: Constants.shared.screen.height * 0.1)
                     .font(.title)
                     .bold()
                     .foregroundColor(.white)
@@ -157,7 +160,7 @@ struct TradeView: View {
             }
             .toolbar {
                 ToolbarItem(placement: .keyboard) {
-                    Text("\(investment)")
+                    Text("Investment: \(investment)")
                 }
             }
             .onTapGesture {
@@ -172,13 +175,27 @@ struct TradeView: View {
         if chance {
             let profit = Double(investment) * 0.7
             balance += Int(profit)
-            resultAlertMessage = "Successfully sold! Profit: \(Int(profit))"
+            resultAlertMessage = "Profit: \(Int(profit))"
         } else {
-            balance -= Int(investment)
-            resultAlertMessage = "Sold! You lost the investment amount."
+            balance -= investment
+            resultAlertMessage = "You lost the investment amount."
         }
-
+        switch balance {
+        case (1...1_000):
+            investment = 100
+        case (1_000...10_000):
+            investment = 1_000
+        case (10_000...100_000):
+            investment = 10_000
+        case (100_000...1_000_000):
+            investment = 100_000
+        case (1_000_000...10_000_000):
+            investment = 100_0000
+        default:
+            investment = 1_000_000
+        }
         remainingSeconds = 0
+        investment = 1000
         showResultAlert = true
     }
 
@@ -187,11 +204,7 @@ struct TradeView: View {
     }
 }
 
-extension UIApplication {
-    func endEditing() {
-        sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-    }
-}
+
 
 struct TradeView_Previews: PreviewProvider {
     static var previews: some View {
